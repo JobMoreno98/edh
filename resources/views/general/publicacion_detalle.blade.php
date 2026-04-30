@@ -33,7 +33,7 @@
                     <a href="{{ asset('storage/' . $publicacion->imagen) }}" data-gallery="{{ $publicacion->titulo }}"
                         class="glightbox">
                         <img src="{{ asset('storage/' . $publicacion->imagen) }}"
-                            class="h-100 img-fluid rounded-4 shadow-md border border-2"
+                            class="h-100 img-fluid rounded-4 shadow-lg border border-2"
                             style="object-fit: cover; border-color:#7689A5;" alt="{{ $publicacion->titulo }}">
                     </a>
                 </div>
