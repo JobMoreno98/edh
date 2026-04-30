@@ -129,7 +129,7 @@
                         <div class="dropdown-menu dropdown-menu-end">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                Logout
+                                {{ __('Log Out') }}
                             </a>
                             <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                 @csrf

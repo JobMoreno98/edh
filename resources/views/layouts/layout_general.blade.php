@@ -49,11 +49,21 @@
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/glightbox.min.css') }}">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100dvh;
+        }
+
+        #footer {
+            margin-top: auto;
+        }
+    </style>
 </head>
 
-<body style="background-color: #FFFFFF; min-height: 100vh; margin: 0; padding: 0;">
-
-
+<body style="background-color: #FFFFFF;">
 
 
     <!-- NAVBAR -->
@@ -97,11 +107,6 @@
         </div>
     </nav>
 
-
-
-
-
-
     <!-- CONTENIDO -->
     <div style="background-color: #FFFFFF; font-family: 'Michroma', sans-serif; padding-bottom: 50px;">
         <!-- Color del Fondo y tipografía -->
@@ -109,7 +114,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer style="background-color: #EDE4CA; font-family: 'Michroma', sans-serif; color: #4a4a4a; margin-top: 50px;">
+    <footer id="footer" style="background-color: #EDE4CA; font-family: 'Michroma', sans-serif; color: #4a4a4a;">
 
         <div class="container py-4 text-center">
 
@@ -172,9 +177,6 @@
         </div> --}}
         </div>
     </footer>
-
-
-
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
