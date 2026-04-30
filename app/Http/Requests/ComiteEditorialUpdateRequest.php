@@ -46,8 +46,8 @@ public function rules(): array
             'required',
             'string',
             'max:255',
-            Rule::unique('autores', 'nombre')
-                ->ignore($this->route('autor')) // ignora el actual al editar
+            Rule::unique('comite_editorial', 'nombre')
+                ->ignore($this->route('comite_editorial')) // ignora el actual al editar
                 ->whereNull('deleted_at'),      // ignora eliminados
         ],
         'apellido'    => 'required|string|max:255',
