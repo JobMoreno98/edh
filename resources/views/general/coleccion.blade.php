@@ -25,19 +25,19 @@
 <div class="container">
     <div class="row justify-content-center g-4"> {{-- g-4 = espacio entre cards --}}
         @forelse($libros as $libro)
-            <div class="col-md-6 col-lg-5 d-flex align-items-stretch">
-                <div class="card shadow-sm d-flex flex-column border-0" style="max-width: 500px; margin: 0 auto;">
+            <div class="col-md-4 col-lg-3 d-flex align-items-stretch">
+                <div class="card shadow-sm d-flex flex-column border-0" style="max-width: 500px; margin: 0 auto;" data-aos="zoom-in" data-aos-duration="500">
 
                     {{-- Imagen del libro --}}
                     @if($libro->imagen)
-                        <img src="{{ Storage::url($libro->imagen) }}" 
+                        <img  src="{{ Storage::url($libro->imagen) }}" 
                              class="card-img-top" 
-                             style="height: 420px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
+                             style="height: 250px; object-fit: cover; aspect-ratio:1/1; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
                              alt="{{ $libro->titulo }}">
                     @else
                         <img src="{{ asset('images/default-libro.png') }}" 
                              class="card-img-top" 
-                             style="height: 320px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
+                             style="height: 250px; object-fit: cover;aspect-ratio:1/1; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
                              alt="Sin imagen">
                     @endif
 
