@@ -25,10 +25,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/ejemplo', function () {
-    return view('ejemplo');
-});
-
 // Route::get('/Login', function () {
 //     return view('General.Login');
 // })->name('login'); 
@@ -75,15 +71,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/listado', function () {
     return view('Admin.Administradores.listado');
 })->name('admin.listado'); */
-
-Route::get('/edicion', function () {
-    return view('Admin.Administradores.edicion');})->name('admin.edicion'); 
-
-Route::get('/formulario', function () {
-    return view('Admin.Administradores.formulario');})->name('admin.formulario'); 
-
-Route::get('/mostrar', function () {
-    return view('Admin.Administradores.mostrar');})->name('admin.mostrar'); 
 
 Route::resource('admin/user',UserController::class)->middleware('auth')->names('admin.users');
 
@@ -462,19 +449,21 @@ Route::get('/home', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('home'); //VERIFICAR ES PARA EL DASHBOARD DESOUES DEL LOGIN ME MNADA A HOME NO A DASH 
 
+
+/*
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+*/
+
 
 require __DIR__.'/auth.php';
 
 
 
 
-
-Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

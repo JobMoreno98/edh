@@ -25,19 +25,26 @@
 
     {{-- Contenido principal --}}
     <section class="container my-5">
-        <div class="row justify-content-center align-items-center" style="max-width: 1200px; margin: auto;">
+        <div class="row justify-content-center " style="margin: auto;">
+            @if ($publicacion->imagen)
+                <div class="col-md-5 d-flex align-items-center justify-content-center mt-3 mt-md-0" data-aos="zoom-in"
+                    data-aos-duration="500">
 
+                    <a href="{{ asset('storage/' . $publicacion->imagen) }}" data-gallery="{{ $publicacion->titulo }}"
+                        class="glightbox">
+                        <img src="{{ asset('storage/' . $publicacion->imagen) }}"
+                            class="h-100 img-fluid rounded-4 shadow-md border border-2"
+                            style="object-fit: cover; border-color:#7689A5;" alt="{{ $publicacion->titulo }}">
+                    </a>
+                </div>
+            @endif
 
-            <div class="col-md-6 d-flex flex-column justify-content-start">
+            <div class="col-md-7 d-flex flex-column justify-content-start" data-aos="fade-left"
+                data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" >
                 <p class="text-muted" style="text-align: justify;">{!! nl2br(e($publicacion->descripcion)) !!}</p>
             </div>
 
-            @if ($publicacion->imagen)
-                <div class="col-md-6 d-flex align-items-center justify-content-center mt-3 mt-md-0">
-                    <img src="{{ asset('storage/' . $publicacion->imagen) }}" class="img-fluid rounded shadow"
-                        alt="Imagen de {{ $publicacion->titulo }}">
-                </div>
-            @endif
+
 
         </div>
     </section>
