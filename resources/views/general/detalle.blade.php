@@ -26,7 +26,7 @@
                         data-aos-easing="ease-in-sine" class="glightbox">
                         <img src="{{ Storage::url($libro->imagen) }}"
                             class="h-100 img-fluid rounded-4 shadow-md border border-2"
-                            style="object-fit: cover; border-color:#7689A5;max-height:400px" alt="{{ $libro->titulo }}">
+                            style="object-fit: cover; border-color:#7689A5; " alt="{{ $libro->titulo }}">
                     </a>
                 </div>
 

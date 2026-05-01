@@ -60,6 +60,12 @@
         #footer {
             margin-top: auto;
         }
+
+        @media(max-width:900px) {
+            .img-show {
+                max-height: 400px !important;
+            }
+        }
     </style>
 </head>
 
