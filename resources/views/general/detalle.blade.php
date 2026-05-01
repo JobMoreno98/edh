@@ -19,13 +19,14 @@
                 {{ $libro->titulo }}
             </h1>
 
-            <div class="d-flex  w-100">
+            <div class="d-flex flex-column flex-md-row w-100">
                 {{-- Imagen del libro --}}
                 <div class="text-center mb-4 col-sm-12 col-md-4">
-                    <a href="{{ Storage::url($libro->imagen) }}" data-gallery="{{ $libro->titulo }}" class="glightbox">
+                    <a href="{{ Storage::url($libro->imagen) }}" data-aos-duration="600" data-aos="fade-up"
+                        data-aos-easing="ease-in-sine" class="glightbox">
                         <img src="{{ Storage::url($libro->imagen) }}"
                             class="h-100 img-fluid rounded-4 shadow-md border border-2"
-                            style="object-fit: cover; border-color:#7689A5;" alt="{{ $libro->titulo }}">
+                            style="object-fit: cover; border-color:#7689A5;max-height:400px" alt="{{ $libro->titulo }}">
                     </a>
                 </div>
 

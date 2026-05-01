@@ -31,7 +31,7 @@
                     data-aos-duration="500">
 
                     <a href="{{ asset('storage/' . $publicacion->imagen) }}" data-gallery="{{ $publicacion->titulo }}"
-                        class="glightbox">
+                        class="glightbox" data-desc-position="right" data-type="image" data-effect="fade">
                         <img src="{{ asset('storage/' . $publicacion->imagen) }}"
                             class="h-100 img-fluid rounded-4 shadow-lg border border-2"
                             style="object-fit: cover; border-color:#7689A5;" alt="{{ $publicacion->titulo }}">
@@ -40,7 +40,7 @@
             @endif
 
             <div class="col-md-7 d-flex flex-column justify-content-start" data-aos="fade-left"
-                data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" >
+                data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
                 <p class="text-muted" style="text-align: justify;">{!! nl2br(e($publicacion->descripcion)) !!}</p>
             </div>
 
