@@ -30,12 +30,12 @@
 
                     {{-- Imagen del libro --}}
                     @if($libro->imagen)
-                        <img  src="{{ asset('imagenes/'.$libro->imagen) }}" 
+                        <img  src="{{ Storage::url($libro->imagen) }}" 
                              class="card-img-top" 
                              style="height: 250px; object-fit: cover; aspect-ratio:1/1; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
                              alt="{{ $libro->titulo }}">
                     @else
-                        <img src="{{ asset('imagenes/default-libro.png') }}" 
+                        <img src="{{ asset('images/default-libro.png') }}" 
                              class="card-img-top" 
                              style="height: 250px; object-fit: cover;aspect-ratio:1/1; border-top-left-radius: 10px; border-top-right-radius: 10px;" 
                              alt="Sin imagen">
